@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `crud_books`
 --
-
+CREATE DATABASE crud_books;
+USE crud_books;
 -- --------------------------------------------------------
 
 --
