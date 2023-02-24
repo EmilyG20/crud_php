@@ -22,33 +22,21 @@
           <label for="author">Autor</label>
           <input type="text" name="author" class="form-control" autofocus>
         </div>
-        <input type="submit" class="btn btn-success mt-3 w-100" name="save_book" value="Agregar">
+        <input type="submit" id="btn_add" class="btn btn-success mt-3 w-100" name="save_book" value="Agregar">
       </form>
     </div>
     
   </div>
-  <div class="container w-50 m-5 text-center">
+  <div class="container w-50 m-5 text-center" id="div_book_new">
     <div class="row ">
       <div class="col border">Titulo</div>
       <div class="col border">Autor</div>
       <div class="col border">Opciones</div>
     </div>
-    
-      <?php
-      $query = "SELECT * FROM books";
-      $result_book = mysqli_query($conn,$query);
+    <div class="row" id="nueva-fila">
 
-      while($row = mysqli_fetch_array($result_book)){?>
-        <div class="row">
-          <div class="col border"><?php echo $row['title'] ?></div>
-          <div class="col border"><?php echo $row['author'] ?></div>
-          <div class="col border">
-            <a class="btn btn-warning" href="edit_book.php?id=<?php echo $row['id'] ?>"> Editar</a>
-            <a class="btn btn-danger" href="delete_book.php?id=<?php echo $row['id'] ?>">X</a>
-          </div>
-        </div>
-      
-      <?php } ?>
+    </div>
+    
     
       
   </div>
